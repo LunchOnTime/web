@@ -1,0 +1,194 @@
+/* Paleta de colores y Reset */
+:root {
+    --verde: #2ecc71;
+    --naranja: #e67e22;
+    --blanco: #ffffff;
+    --oscuro: #2c3e50;
+    --gris-claro: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* EFECTO DE DESPLAZAMIENTO SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--oscuro);
+}
+
+/* Navegación */
+header {
+    background: var(--blanco);
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--verde);
+}
+
+.logo span {
+    color: var(--naranja);
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--oscuro);
+    font-weight: 400;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* BOTÓN AJUSTADO PARA DESLIZAR */
+.btn-cta {
+    background: var(--naranja);
+    color: white !important; /* Garantiza que el texto sea blanco siempre */
+    text-decoration: none;   /* Quita el subrayado de enlace */
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.btn-cta:hover {
+    background: #d35400; /* Un naranja más oscuro al pasar el mouse */
+}
+
+/* Secciones Generales */
+.container {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: var(--gris-claro);
+    padding: 30px;
+    border-left: 5px solid var(--verde);
+    border-radius: 8px;
+}
+
+.bg-light {
+    background-color: var(--verde);
+    color: white;
+}
+
+.valor-item {
+    background: rgba(255,255,255,0.1);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Tags de Público */
+.tags span {
+    display: inline-block;
+    background: var(--naranja);
+    color: white;
+    padding: 8px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+footer {
+    background: var(--oscuro);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos del Menú */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.plato-card {
+    background: var(--blanco);
+    border: 1px solid #eee;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.plato-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.plato-card h4 {
+    color: var(--oscuro);
+    margin: 15px 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.precio {
+    display: block;
+    margin-top: 15px;
+    color: var(--verde);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Etiquetas de tipo de comida */
+.tag-tradicional, .tag-vegano {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    color: white;
+}
+
+.tag-tradicional { background-color: var(--naranja); }
+.tag-vegano { background-color: var(--verde); }
